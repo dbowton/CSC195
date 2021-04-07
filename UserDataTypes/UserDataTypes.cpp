@@ -1,27 +1,46 @@
-// HelloWorld.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// UserDataTypes.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-#include <string>
 using namespace std;
 
-namespace bowton {
-    void print(){
-        
+
+class Sandwhich {
+public:
+    void Display() {
+        cout << "Price: " << price << endl;
     }
-}
 
-int main(){
-    bowton::print();
+public:
+    char name[32];
+    float price;
+    bool isHot;
+};
 
-    cout << "Hello World Maybe!\n";
 
-    int age = 10;
-    cout << "Enter Age: ";
+int main()
+{
+    Sandwhich sandwich;
+    sandwich.price = 4.99;
+    sandwich.isHot = true;
 
-    cin >> age;
 
-    cout << "Age: " << age << endl;
+    sandwich.Display();
+
+
+    cout << "Hello World!\n";
+
+    int i = 5;
+    char c = 23;
+
+    i = c;
+
+    float f = 23.4f;
+    double d = 34.5;
+
+    f = static_cast<float>(d);
+
+    cout << sizeof(Sandwhich);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
